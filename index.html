@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> For my day 1  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="landing-page" class="landing-page">
+        <div class="landing-hearts">♡ ♥ ♡ ♥ ♡</div>
+
+        <div class="cupid-container" id="cupid-target">
+            
+<div class="cupid-bow">
+    <svg viewBox="0 0 120 100" class="bow-svg">
+        <!-- Busur kayu -->
+        <path d="M 35 8 Q 90 50 35 92"
+              fill="none"
+              stroke="#8b542e"
+              stroke-width="7"
+              stroke-linecap="round"/>
+
+        <!-- Highlight kayu -->
+        <path d="M 37 12 Q 83 50 37 88"
+              fill="none"
+              stroke="#d9a066"
+              stroke-width="2.5"
+              stroke-linecap="round"/>
+
+        <!-- Tali busur -->
+        <path d="M 35 8 L 35 92"
+              fill="none"
+              stroke="#f5d9b5"
+              stroke-width="1.8"/>
+
+        <!-- Anak panah pada busur -->
+        <path d="M 35 50 L 108 50"
+              fill="none"
+              stroke="#60402b"
+              stroke-width="3"
+              stroke-linecap="round"/>
+
+        <!-- Mata anak panah -->
+        <path d="M 108 50 L 96 43 L 99 50 L 96 57 Z"
+              fill="#d94f83"/>
+
+        <!-- Bulu anak panah -->
+        <path d="M 43 50 L 35 42 L 37 50 L 35 58 Z"
+              fill="#d94f83"/>
+
+        <!-- Hiasan tengah -->
+        <circle cx="35" cy="50" r="4" fill="#f2c4d5"/>
+    </svg>
+</div>
+
+            <h1>For my most special person</h1>
+            <p>Click anywhere my baby</p>
+        </div>
+
+        <div id="love-arrow" class="love-arrow hidden">
+            💘
+        </div>
+    </section>
+
+    
+<!--DATING POPUP -->
+<div id="dating-popup" class="popup-overlay hidden">
+    <div class="dating-card">
+        <button id="close-dating" class="close-button">&times;</button>
+
+        
+<div id="cat-character" class="pixel-cat">
+    <svg viewBox="0 0 120 110" class="pixel-cat-svg"
+         xmlns="http://www.w3.org/2000/svg"
+         shape-rendering="crispEdges">
+
+        <!-- Telinga -->
+        <rect x="22" y="10" width="26" height="28" fill="#6b4b43"/>
+        <rect x="72" y="10" width="26" height="28" fill="#6b4b43"/>
+        <rect x="29" y="17" width="12" height="14" fill="#f4a7c5"/>
+        <rect x="79" y="17" width="12" height="14" fill="#f4a7c5"/>
+
+        <!-- Kepala -->
+        <rect x="18" y="27" width="84" height="52" rx="5" fill="#fff0dc"/>
+        <rect x="25" y="22" width="70" height="10" fill="#fff0dc"/>
+
+        <!-- Mata -->
+        <rect x="35" y="43" width="8" height="10" fill="#49352f"/>
+        <rect x="77" y="43" width="8" height="10" fill="#49352f"/>
+
+        <!-- Pipi -->
+        <rect x="26" y="55" width="15" height="7" fill="#f6b2c8"/>
+        <rect x="79" y="55" width="15" height="7" fill="#f6b2c8"/>
+
+        <!-- Hidung dan mulut -->
+        <rect x="56" y="54" width="8" height="5" fill="#c65383"/>
+        <path d="M60 59 L55 64 M60 59 L65 64"
+              stroke="#49352f" stroke-width="2" fill="none"/>
+
+        <!-- Badan -->
+        <rect x="32" y="77" width="56" height="28" rx="6" fill="#fff0dc"/>
+        <rect x="23" y="83" width="16" height="15" fill="#fff0dc"/>
+        <rect x="81" y="83" width="16" height="15" fill="#fff0dc"/>
+
+        <!-- Hati yang dipegang -->
+        <path d="M60 83
+                 C48 70 35 81 43 91
+                 L60 104 L77 91
+                 C85 81 72 70 60 83 Z"
+              fill="#ed689b" stroke="#c65383" stroke-width="2"/>
+
+        <!-- Kaki -->
+        <rect x="35" y="99" width="20" height="7" fill="#fff0dc"/>
+        <rect x="65" y="99" width="20" height="7" fill="#fff0dc"/>
+    </svg>
+</div>
+
+
+        <h2 id="dating-question">Nak dating dengan saya tak?</h2>
+        <p id="dating-subtitle">Please say yes sayang </p>
+
+        <div id="answer-buttons" class="answer-buttons">
+            <button id="yes-button">Yes !!</button>
+            <button id="no-button">No.. </button>
+        </div>
+
+        <button id="continue-button" class="hidden">
+            Next ➜
+        </button>
+    </div>
+</div>
+
+
+<!-- PAGE 3: DATE & TIME -->
+<section id="date-page" class="date-page hidden">
+    <div class="date-card">
+        <div class="date-decoration">♡</div>
+
+        <h1>When are we going on a date?</h1>
+        <p class="date-subtitle">
+            Bila sayangku free? Choose the date ꨄ︎
+        </p>
+
+        <label for="date-choice">Our special day</label>
+        <input type="date" id="date-choice" required>
+
+        <label for="time-choice">What time?</label>
+        <input type="time" id="time-choice" required>
+
+        <p id="date-message" class="date-message"></p>
+
+        <button id="date-next-button" type="button">
+            Lanjuut →
+        </button>
+    </div>
+</section>
+
+
+<!-- PAGE 4: DATE ACTIVITIES -->
+<section id="activity-page" class="activity-page hidden">
+    <div class="activity-card">
+        <h1>Our date, our way ♡</h1>
+        <p>Pilih apa yang sayang nak kita buat!</p>
+
+        <h2>What should we do?</h2>
+
+        <div class="choice-grid">
+            <label class="choice-option">
+                <input type="checkbox" name="activity" value="Cafe hopping">
+                <span>Cafe hopping</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="checkbox" name="activity" value="Movie date">
+                <span> Movie date</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="checkbox" name="activity" value="Shopping">
+                <span>Shopping</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="checkbox" name="activity" value="Picnic">
+                <span> Picnic</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="checkbox" name="activity" value="Dinner date">
+                <span> Dinner date</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="checkbox" name="activity" value="Surprise me">
+                <span> Surprise me</span>
+            </label>
+        </div>
+
+        <h2>Dress code</h2>
+
+        <div class="dress-options">
+            <label class="choice-option">
+                <input type="radio" name="dresscode" value="Casual">
+                <span>Casual</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="radio" name="dresscode" value="Matching outfits">
+                <span>Matching outfits</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="radio" name="dresscode" value="All black">
+                <span>All black</span>
+            </label>
+
+            <label class="choice-option">
+                <input type="radio" name="dresscode" value="Let me choose">
+                <span>Let me choose</span>
+            </label>
+        </div>
+
+        <p id="activity-message" class="activity-message"></p>
+
+        <button id="activity-next-button" type="button">
+            Seterusnya →
+        </button>
+    </div>
+</section>
+
+
+<section id="message-page" class="message-page hidden">
+  <div class="message-card">
+    <div class="message-decoration">♡</div>
+    <h1>A little message for me?</h1>
+    <p>Pesanan untuk Farish? Tulis apa-apa yang sayang nak cakap dekat i ♡</p>
+
+    <textarea
+      id="love-message"
+      placeholder="Dear Farish, ... "
+      rows="5"
+      maxlength="500"
+    ></textarea>
+
+    <p id="message-counter">0/500</p>
+    <p id="love-message-error" class="message-error"></p>
+
+    <button id="message-next-button" type="button">
+      Create our ticket ♡
+    </button>
+  </div>
+</section>
+
+
+<section id="ticket-page" class="ticket-page hidden">
+  <div class="ticket-wrapper">
+    <div id="date-ticket" class="date-ticket">
+      <div class="ticket-header">
+        <span>OUR LITTLE DATE</span>
+        <div class="ticket-heart">ꨄ</div>
+        <h1>It's a Date!</h1>
+        <p>Officially reserved for my favourite person</p>
+      </div>
+
+      <div class="ticket-body">
+        <div class="ticket-detail">
+          <span>📅 DATE</span>
+          <strong id="ticket-date">Not selected</strong>
+        </div>
+
+        <div class="ticket-detail">
+          <span>🕒 TIME</span>
+          <strong id="ticket-time">Not selected</strong>
+        </div>
+
+        <div class="ticket-detail">
+          <span>💞 OUR PLANS</span>
+          <strong id="ticket-activities">Not selected</strong>
+        </div>
+
+        <div class="ticket-detail">
+          <span>👗 DRESS CODE</span>
+          <strong id="ticket-dresscode">Not selected</strong>
+        </div>
+
+        <div class="ticket-message">
+          <span>💌 A MESSAGE FOR FARISH</span>
+          <p id="ticket-message">No message yet ♡</p>
+        </div>
+      </div>
+
+      <div class="ticket-footer">
+        <p>Made with love, just for you ♡</p>
+        <span>ADMIT TWO • ONE SPECIAL DAY</span>
+      </div>
+    </div>
+
+    <p id="ticket-error" class="ticket-error"></p>
+
+    <button id="save-ticket-button" type="button">📸 Save ticket as PNG</button>
+    <button id="share-ticket-button" type="button">💬 Send via WhatsApp</button>
+  </div>
+
+  <button id="open-anniversary-button" type="button">
+    Open your anniversary surprise ♡
+</button> 
+</section>
+
+
+
+
+<!-- FINAL PAGE: ANNIVERSARY SURPRISE -->
+<section id="anniversary-page" class="anniversary-page hidden">
+
+    <div class="hearts">
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+    </div>
+
+    <div class="love-card">
+        
+        <h1>Happy anniversary my sayang ♡</h1>
+        <p>A little something for you (●'◡'●)</p>
+        <button id="letter-button" type="button">Open my letter ♡</button>
+    </div>
+
+    <div id="letter-popup" class="popup-overlay hidden">
+        <div class="popup-window">
+            <button id="close-letter" class="close-button" type="button">&times;</button>
+
+            <div class="letter-side">
+                <h2>To my favourite person 🤍</h2>
+                <p id="typed-letter"></p>
+            </div>
+
+            <div class="photo-side">
+                <div class="carousel">
+                    <img src="photo1.jpg" alt="Our memory 1">
+                    <img src="photo2.jpg" alt="Our memory 2">
+                    <img src="photo3.jpg" alt="Our memory 3">
+                    <img src="photo4.jpg" alt="Our memory 4">
+                    <img src="photo5.jpg" alt="Our memory 5">
+                    <img src="photo6.jpg" alt="Our memory 6">
+                    <img src="photo7.jpg" alt="Our memory 7">
+                    <img src="photo8.jpg" alt="Our memory 8">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
